@@ -1,0 +1,23 @@
+[tool.poetry]
+name = "qrc"
+version = "0.1.0"
+description = "QR Code generator"
+authors = ["Yoichi Amano <amano.yoichi@gmail.com>"]
+readme = "README.md"
+packages = [{include = "qrc", from = "src"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+qrcode = "^7.3.1"
+pillow = "^9.2.0"
+
+[tool.poetry.group.dev.dependencies]
+black = "^22.10.0"
+flake8 = "^5.0.4"
+
+[tool.poetry.scripts]
+qrc = "qrc.qrc:main"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
